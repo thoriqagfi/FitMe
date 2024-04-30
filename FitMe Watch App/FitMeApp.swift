@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import HealthKit
 
 @main
 struct FitMe_Watch_AppApp: App {
+    @StateObject var workoutManager = WorkoutManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(workoutManager)
         }
     }
 }

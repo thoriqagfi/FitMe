@@ -12,6 +12,11 @@
 		D08AB79A2BDF9F5800E87D9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7992BDF9F5800E87D9E /* ContentView.swift */; };
 		D08AB79C2BDF9F5900E87D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08AB79B2BDF9F5900E87D9E /* Assets.xcassets */; };
 		D08AB79F2BDF9F5900E87D9E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08AB79E2BDF9F5900E87D9E /* Preview Assets.xcassets */; };
+		D08AB7AE2BDFACD300E87D9E /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7AD2BDFACD300E87D9E /* WorkoutManager.swift */; };
+		D08AB7B02BE062CB00E87D9E /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7AF2BE062CB00E87D9E /* SessionPagingView.swift */; };
+		D08AB7B22BE0647F00E87D9E /* SpeedometerVelocityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B12BE0647F00E87D9E /* SpeedometerVelocityView.swift */; };
+		D08AB7B42BE064C500E87D9E /* KilometerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */; };
+		D08AB7B62BE064EC00E87D9E /* RunningVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,13 @@
 		D08AB7992BDF9F5800E87D9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D08AB79B2BDF9F5900E87D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D08AB79E2BDF9F5900E87D9E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D08AB7A92BDFAC1C00E87D9E /* FitMe Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FitMe Watch App.entitlements"; sourceTree = "<group>"; };
+		D08AB7AA2BDFAC3100E87D9E /* FitMe-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FitMe-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D08AB7AD2BDFACD300E87D9E /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		D08AB7AF2BE062CB00E87D9E /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		D08AB7B12BE0647F00E87D9E /* SpeedometerVelocityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedometerVelocityView.swift; sourceTree = "<group>"; };
+		D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilometerProgressView.swift; sourceTree = "<group>"; };
+		D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningVisualizationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +90,15 @@
 		D08AB7962BDF9F5800E87D9E /* FitMe Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				D08AB7AA2BDFAC3100E87D9E /* FitMe-Watch-App-Info.plist */,
+				D08AB7A92BDFAC1C00E87D9E /* FitMe Watch App.entitlements */,
 				D08AB7972BDF9F5800E87D9E /* FitMeApp.swift */,
+				D08AB7AD2BDFACD300E87D9E /* WorkoutManager.swift */,
 				D08AB7992BDF9F5800E87D9E /* ContentView.swift */,
+				D08AB7AF2BE062CB00E87D9E /* SessionPagingView.swift */,
+				D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */,
+				D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */,
+				D08AB7B12BE0647F00E87D9E /* SpeedometerVelocityView.swift */,
 				D08AB79B2BDF9F5900E87D9E /* Assets.xcassets */,
 				D08AB79D2BDF9F5900E87D9E /* Preview Content */,
 			);
@@ -193,7 +212,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08AB79A2BDF9F5800E87D9E /* ContentView.swift in Sources */,
+				D08AB7B22BE0647F00E87D9E /* SpeedometerVelocityView.swift in Sources */,
 				D08AB7982BDF9F5800E87D9E /* FitMeApp.swift in Sources */,
+				D08AB7AE2BDFACD300E87D9E /* WorkoutManager.swift in Sources */,
+				D08AB7B42BE064C500E87D9E /* KilometerProgressView.swift in Sources */,
+				D08AB7B02BE062CB00E87D9E /* SessionPagingView.swift in Sources */,
+				D08AB7B62BE064EC00E87D9E /* RunningVisualizationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,13 +351,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FitMe Watch App/FitMe Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitMe Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = H84M48MBJL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to suggest your velocity and distance";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -357,13 +384,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FitMe Watch App/FitMe Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitMe Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = H84M48MBJL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to suggest your velocity and distance";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
