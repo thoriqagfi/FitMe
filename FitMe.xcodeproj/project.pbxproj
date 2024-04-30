@@ -20,6 +20,7 @@
 		D08AB7B22BE0647F00E87D9E /* SpeedometerVelocityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B12BE0647F00E87D9E /* SpeedometerVelocityView.swift */; };
 		D08AB7B42BE064C500E87D9E /* KilometerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */; };
 		D08AB7B62BE064EC00E87D9E /* RunningVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */; };
+		E92CACAD2BE0FC850048570C /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = E92CACAC2BE0FC850048570C /* SDWebImageLottieCoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D024AAD32BE0F8BE00379654 /* Lottie in Frameworks */,
+				E92CACAD2BE0FC850048570C /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +158,7 @@
 			name = "FitMe Watch App";
 			packageProductDependencies = (
 				D024AAD22BE0F8BE00379654 /* Lottie */,
+				E92CACAC2BE0FC850048570C /* SDWebImageLottieCoder */,
 			);
 			productName = "FitMe Watch App";
 			productReference = D08AB7922BDF9F5800E87D9E /* FitMe Watch App.app */;
@@ -190,6 +193,7 @@
 			mainGroup = D08AB7852BDF9F5700E87D9E;
 			packageReferences = (
 				D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				E92CACAB2BE0FC850048570C /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
 			);
 			productRefGroup = D08AB78D2BDF9F5800E87D9E /* Products */;
 			projectDirPath = "";
@@ -505,6 +509,14 @@
 				minimumVersion = 4.4.3;
 			};
 		};
+		E92CACAB2BE0FC850048570C /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -512,6 +524,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		E92CACAC2BE0FC850048570C /* SDWebImageLottieCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E92CACAB2BE0FC850048570C /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
+			productName = SDWebImageLottieCoder;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
