@@ -20,6 +20,7 @@ struct SessionPagingView: View {
             KilometerProgressView().tag(Tab.kilometerProgress)
             RunningVisualizationView().tag(Tab.runningVisualization)
         })
+        .tabViewStyle(.verticalPage)
     }
 }
 
