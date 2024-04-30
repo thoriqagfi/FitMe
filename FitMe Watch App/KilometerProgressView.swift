@@ -58,7 +58,7 @@ struct ProgressBar: Shape {
         let lowestPoint = 0.01
         let highestPoint = 1.00
         
-        let newProgress = lowestPoint + (highestPoint - lowestPoint) * (percent / 100)
+        let newProgress = (highestPoint - lowestPoint) * (percent / 100)
         let yOffSet = CGFloat(1 - newProgress) * rect.height
         let startAngle = offset
         let endAngle = offset + Angle(degrees: 360 + 10)
