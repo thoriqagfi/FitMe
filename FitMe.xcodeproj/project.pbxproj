@@ -83,6 +83,7 @@
 		D08AB7852BDF9F5700E87D9E = {
 			isa = PBXGroup;
 			children = (
+				E92CACAE2BE0FDCF0048570C /* .gitignore */,
 				D08AB7962BDF9F5800E87D9E /* FitMe Watch App */,
 				D08AB78D2BDF9F5800E87D9E /* Products */,
 			);
@@ -113,7 +114,6 @@
 				D08AB7B12BE0647F00E87D9E /* SpeedometerVelocityView.swift */,
 				D08AB79B2BDF9F5900E87D9E /* Assets.xcassets */,
 				D08AB79D2BDF9F5900E87D9E /* Preview Content */,
-				E92CACAE2BE0FDCF0048570C /* .gitignore */,
 			);
 			path = "FitMe Watch App";
 			sourceTree = "<group>";
