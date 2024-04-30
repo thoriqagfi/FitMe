@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D024AAC92BE0BEFC00379654 /* AccelerometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */; };
+		D024AACB2BE0D4A400379654 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024AACA2BE0D4A400379654 /* StartView.swift */; };
+		D024AAD32BE0F8BE00379654 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D024AAD22BE0F8BE00379654 /* Lottie */; };
 		D08AB7932BDF9F5800E87D9E /* FitMe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D08AB7922BDF9F5800E87D9E /* FitMe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D08AB7982BDF9F5800E87D9E /* FitMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7972BDF9F5800E87D9E /* FitMeApp.swift */; };
 		D08AB79A2BDF9F5800E87D9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7992BDF9F5800E87D9E /* ContentView.swift */; };
@@ -44,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerManager.swift; sourceTree = "<group>"; };
+		D024AACA2BE0D4A400379654 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		D08AB78C2BDF9F5800E87D9E /* FitMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08AB7922BDF9F5800E87D9E /* FitMe Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FitMe Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08AB7972BDF9F5800E87D9E /* FitMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitMeApp.swift; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D024AAD32BE0F8BE00379654 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +100,9 @@
 				D08AB7A92BDFAC1C00E87D9E /* FitMe Watch App.entitlements */,
 				D08AB7972BDF9F5800E87D9E /* FitMeApp.swift */,
 				D08AB7AD2BDFACD300E87D9E /* WorkoutManager.swift */,
+				D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */,
 				D08AB7992BDF9F5800E87D9E /* ContentView.swift */,
+				D024AACA2BE0D4A400379654 /* StartView.swift */,
 				D08AB7AF2BE062CB00E87D9E /* SessionPagingView.swift */,
 				D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */,
 				D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */,
@@ -146,6 +154,9 @@
 			dependencies = (
 			);
 			name = "FitMe Watch App";
+			packageProductDependencies = (
+				D024AAD22BE0F8BE00379654 /* Lottie */,
+			);
 			productName = "FitMe Watch App";
 			productReference = D08AB7922BDF9F5800E87D9E /* FitMe Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +188,9 @@
 				Base,
 			);
 			mainGroup = D08AB7852BDF9F5700E87D9E;
+			packageReferences = (
+				D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = D08AB78D2BDF9F5800E87D9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,9 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D024AACB2BE0D4A400379654 /* StartView.swift in Sources */,
 				D08AB79A2BDF9F5800E87D9E /* ContentView.swift in Sources */,
 				D08AB7B22BE0647F00E87D9E /* SpeedometerVelocityView.swift in Sources */,
 				D08AB7982BDF9F5800E87D9E /* FitMeApp.swift in Sources */,
+				D024AAC92BE0BEFC00379654 /* AccelerometerManager.swift in Sources */,
 				D08AB7AE2BDFACD300E87D9E /* WorkoutManager.swift in Sources */,
 				D08AB7B42BE064C500E87D9E /* KilometerProgressView.swift in Sources */,
 				D08AB7B02BE062CB00E87D9E /* SessionPagingView.swift in Sources */,
@@ -361,6 +377,7 @@
 				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to suggest your velocity and distance";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by MyWorkouts on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -394,6 +411,7 @@
 				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to suggest your velocity and distance";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by MyWorkouts on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,6 +495,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D024AAD22BE0F8BE00379654 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D08AB7862BDF9F5700E87D9E /* Project object */;
 }

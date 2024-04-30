@@ -7,6 +7,7 @@
 
 import SwiftUI
 import HealthKit
+import CoreMotion
 
 @main
 struct FitMe_Watch_AppApp: App {

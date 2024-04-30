@@ -7,18 +7,20 @@
 
 import SwiftUI
 import HealthKit
+import CoreMotion
 //import CoreLocation
 
 struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
+    @State var timer: Timer = Timer()
     
-//    var speed = CLLocationSpeed()
+    //    var speed = CLLocationSpeed()
     @State private var speed: Double = 0
     let locationManager = CLLocationManager()
     
     var body: some View {
         VStack {
-            Text("\(speed)")
+            Text("\(speed) kmh")
             
             Button(action: {
                 // Get the current location
@@ -35,7 +37,7 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-//            workoutManager.requestAuthorization()
+            workoutManager.requestAuthorization()
         }
     }
 }
