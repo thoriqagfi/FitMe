@@ -29,6 +29,9 @@ struct ContentView: View {
                 if let currentLocation = self.locationManager.location {
                     print("Speed")
                     print("\(currentLocation.speed)")
+                    print("\(currentLocation.timestamp)")
+                    print("\(currentLocation.coordinate.latitude)")
+                    print("\(currentLocation.coordinate.longitude)")
                     // Get the speed in meters per second
                     let speed = currentLocation.speed
                     // Convert the speed to kilometers per hour

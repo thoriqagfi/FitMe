@@ -11,7 +11,7 @@ struct KilometerProgressView: View {
     
     let background = Color(.white)
     
-    @State private var progressPercent = 25.0
+    @State private var progressPercent = 75.0
     @State private var barOffset = Angle(degrees: 0)
     
     var body: some View {
@@ -59,19 +59,20 @@ struct ProgressBar: Shape {
         let highestPoint = 1.00
         
         let newProgress = (highestPoint - lowestPoint) * (percent / 100)
-        let yOffSet = CGFloat(1 - newProgress) * rect.height
+        let xOffSet = CGFloat(1 - (1 - newProgress)) * rect.width
         let startAngle = offset
         let endAngle = offset + Angle(degrees: 360 + 10)
         
-        p.move(to: CGPoint(x: 0, y: yOffSet))
+//        p.move(to: CGPoint(x: 0, y: yOffSet))
+        p.move(to: CGPoint(x: 0, y: 0))
         
         for angle in stride(from: startAngle.degrees, through: endAngle.degrees, by: 5) {
-            let x = CGFloat((angle - startAngle.degrees)) / 360 * rect.width
-            p.addLine(to: CGPoint(x: x, y: yOffSet))
+            let y = CGFloat((angle - startAngle.degrees)) / 360 * rect.height
+            p.addLine(to: CGPoint(x: xOffSet, y: y))
         }
         
-        p.addLine(to: CGPoint(x: rect.width, y: rect.height))
         p.addLine(to: CGPoint(x: 0, y: rect.height))
+//        p.addLine(to: CGPoint(x: rect.height, y: 0))
         
         p.closeSubpath()
         

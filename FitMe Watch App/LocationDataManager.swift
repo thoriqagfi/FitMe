@@ -15,24 +15,28 @@ class LocationDataManager: NSObject, ObservableObject, CLLocationManagerDelegate
     // create a location manager
     private let locationManager = CLLocationManager()
     
+    var currentLocation: CLLocation?
+    
     override init() {
         super.init()
         
         // do configure the location manager
-        locationManager.delegate = self
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func requestAccessPermission() {
-        switch locationManager.authorizationStatus {
-        case .authorizedWhenInUse: do {
+        locationManager.requestWhenInUseAuthorization()
+        
+        if locationManager.authorizationStatus == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            print(currentLocation?.coordinate.latitude, currentLocation?.coordinate.longitude, currentLocation?.speed, currentLocation?.timestamp)
+            
             locationManager.startUpdatingLocation()
             locationManager.startUpdatingHeading()
-        }
-        case .notDetermined: locationManager.requestWhenInUseAuthorization()
-        case .denied, .restricted:
-            break
-        default:
-            break
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            requestAccessPermission()
         }
     }
 }
