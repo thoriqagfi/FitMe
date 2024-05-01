@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00E1ACA2BE282A7007E507D /* LottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E1AC92BE282A7007E507D /* LottieViewModel.swift */; };
+		D00E1ACC2BE2856C007E507D /* personRun.json in Resources */ = {isa = PBXBuildFile; fileRef = D00E1ACB2BE2856C007E507D /* personRun.json */; };
 		D024AAC92BE0BEFC00379654 /* AccelerometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */; };
 		D024AACB2BE0D4A400379654 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024AACA2BE0D4A400379654 /* StartView.swift */; };
 		D08AB7932BDF9F5800E87D9E /* FitMe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D08AB7922BDF9F5800E87D9E /* FitMe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D00E1AC92BE282A7007E507D /* LottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieViewModel.swift; sourceTree = "<group>"; };
+		D00E1ACB2BE2856C007E507D /* personRun.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = personRun.json; sourceTree = "<group>"; };
 		D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerManager.swift; sourceTree = "<group>"; };
 		D024AACA2BE0D4A400379654 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		D08AB78C2BDF9F5800E87D9E /* FitMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,8 +115,10 @@
 				D024AACA2BE0D4A400379654 /* StartView.swift */,
 				D08AB7AF2BE062CB00E87D9E /* SessionPagingView.swift */,
 				D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */,
+				D00E1AC92BE282A7007E507D /* LottieViewModel.swift */,
 				D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */,
 				D08AB7B12BE0647F00E87D9E /* SpeedometerVelocityView.swift */,
+				D00E1ACB2BE2856C007E507D /* personRun.json */,
 				D08AB79B2BDF9F5900E87D9E /* Assets.xcassets */,
 				D08AB79D2BDF9F5900E87D9E /* Preview Content */,
 			);
@@ -221,6 +227,7 @@
 			files = (
 				D08AB79F2BDF9F5900E87D9E /* Preview Assets.xcassets in Resources */,
 				E92CACAF2BE0FDCF0048570C /* .gitignore in Resources */,
+				D00E1ACC2BE2856C007E507D /* personRun.json in Resources */,
 				D08AB79C2BDF9F5900E87D9E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +245,7 @@
 				D08AB7982BDF9F5800E87D9E /* FitMeApp.swift in Sources */,
 				E973C9772BE1F37600F96732 /* LocationDataManager.swift in Sources */,
 				D024AAC92BE0BEFC00379654 /* AccelerometerManager.swift in Sources */,
+				D00E1ACA2BE282A7007E507D /* LottieViewModel.swift in Sources */,
 				D08AB7AE2BDFACD300E87D9E /* WorkoutManager.swift in Sources */,
 				D08AB7B42BE064C500E87D9E /* KilometerProgressView.swift in Sources */,
 				D08AB7B02BE062CB00E87D9E /* SessionPagingView.swift in Sources */,
@@ -379,13 +387,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitMe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = MRV3669B85;
+				DEVELOPMENT_TEAM = H84M48MBJL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to suggest your velocity and distance";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by MyWorkouts on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "location-services";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -393,7 +404,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lonard.fitme;
+				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -413,13 +424,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitMe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = MRV3669B85;
+				DEVELOPMENT_TEAM = H84M48MBJL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Your workout data is used to suggest your velocity and distance";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Workouts tracked by MyWorkouts on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = "location-services";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -427,7 +441,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lonard.fitme;
+				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -445,7 +459,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MRV3669B85;
+				DEVELOPMENT_TEAM = H84M48MBJL;
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe";
@@ -461,7 +475,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MRV3669B85;
+				DEVELOPMENT_TEAM = H84M48MBJL;
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe";

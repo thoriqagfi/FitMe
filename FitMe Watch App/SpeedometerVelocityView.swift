@@ -17,8 +17,8 @@ struct SpeedometerVelocityView: View {
             backgroundGradient
                 .opacity(0.7)
             ZStack {
-                Text("\(String(format: "%.0f", accelerometerManager.pace))")
-                        .font(.system(size: 200))
+                Text("\(String(format: "%.2f", accelerometerManager.pace))")
+                        .font(.system(size: 50))
                         .multilineTextAlignment(.center)
                         .fontWeight(.bold)
                         .opacity(0.3)

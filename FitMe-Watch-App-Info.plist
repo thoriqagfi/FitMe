@@ -4,14 +4,6 @@
 <dict>
 	<key>UIBackgroundModes</key>
 	<array/>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>location-services</string>
-	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string></string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>WKBackgroundModes</key>
 	<array>
 		<string>workout-processing</string>

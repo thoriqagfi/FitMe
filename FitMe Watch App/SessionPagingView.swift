@@ -10,6 +10,7 @@ import SwiftUI
 struct SessionPagingView: View {
     @State private var selection: Tab = .speedometerVelocity
     @EnvironmentObject var sessionManager: WorkoutManager
+    @EnvironmentObject var accelerometerManager: AccelerometerManager
     @Environment(\.dismiss) var dismiss
     
     enum Tab {
@@ -40,4 +41,6 @@ struct SessionPagingView: View {
 
 #Preview {
     SessionPagingView()
+        .environmentObject(WorkoutManager())
+        .environmentObject(AccelerometerManager())
 }
