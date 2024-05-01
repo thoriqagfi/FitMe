@@ -13,12 +13,14 @@ import CoreMotion
 struct FitMe_Watch_AppApp: App {
     @StateObject var workoutManager = WorkoutManager()
     @StateObject var locationDataManager = LocationDataManager()
+    @StateObject var accelerometerManager = AccelerometerManager()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(workoutManager)
                 .environmentObject(locationDataManager)
+                .environmentObject(accelerometerManager)
         }
     }
 }

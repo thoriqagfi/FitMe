@@ -57,21 +57,29 @@ struct StartView: View {
                         }
                     }))
                     .rotationEffect(Angle(degrees: -89))
+                    .digitalCrownRotation($progress)
                 
-                Button(action: {
-                    print("halo")
+                NavigationLink(destination: {
+                    SessionPagingView()
                 }, label: {
-                    Circle()
-                        .foregroundColor(.yellow)
-                        .frame(width: 100, height: 100)
-                        .overlay(alignment: .center, content: {
-                            Image(systemName: "play.fill")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                                .foregroundColor(.white)
-                                .opacity(0.7)
-                        })
+                    Button(action: {
+                        print("halo")
+                    }, label: {
+                        Circle()
+                            .foregroundColor(.yellow)
+                            .frame(width: 100, height: 100)
+                            .overlay(alignment: .center, content: {
+                                Image(systemName: "play.fill")
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundColor(.white)
+                                    .opacity(0.7)
+                            })
+                    })
+                    .frame(width: 100, height: 100)
+                    .clipShape(Circle())
                 })
+                .frame(width: 100, height: 100)
                 .clipShape(Circle())
             })
             
