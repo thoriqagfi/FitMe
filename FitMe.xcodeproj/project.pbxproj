@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D024AAC92BE0BEFC00379654 /* AccelerometerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */; };
 		D024AACB2BE0D4A400379654 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D024AACA2BE0D4A400379654 /* StartView.swift */; };
-		D024AAD32BE0F8BE00379654 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D024AAD22BE0F8BE00379654 /* Lottie */; };
 		D08AB7932BDF9F5800E87D9E /* FitMe Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D08AB7922BDF9F5800E87D9E /* FitMe Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D08AB7982BDF9F5800E87D9E /* FitMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7972BDF9F5800E87D9E /* FitMeApp.swift */; };
 		D08AB79A2BDF9F5800E87D9E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7992BDF9F5800E87D9E /* ContentView.swift */; };
@@ -22,6 +21,7 @@
 		D08AB7B62BE064EC00E87D9E /* RunningVisualizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */; };
 		E92CACAD2BE0FC850048570C /* SDWebImageLottieCoder in Frameworks */ = {isa = PBXBuildFile; productRef = E92CACAC2BE0FC850048570C /* SDWebImageLottieCoder */; };
 		E92CACAF2BE0FDCF0048570C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = E92CACAE2BE0FDCF0048570C /* .gitignore */; };
+		E973C9772BE1F37600F96732 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973C9762BE1F37600F96732 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,7 @@
 		D08AB7B32BE064C500E87D9E /* KilometerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KilometerProgressView.swift; sourceTree = "<group>"; };
 		D08AB7B52BE064EC00E87D9E /* RunningVisualizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningVisualizationView.swift; sourceTree = "<group>"; };
 		E92CACAE2BE0FDCF0048570C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		E973C9762BE1F37600F96732 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D024AAD32BE0F8BE00379654 /* Lottie in Frameworks */,
 				E92CACAD2BE0FC850048570C /* SDWebImageLottieCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +103,7 @@
 			children = (
 				D08AB7AA2BDFAC3100E87D9E /* FitMe-Watch-App-Info.plist */,
 				D08AB7A92BDFAC1C00E87D9E /* FitMe Watch App.entitlements */,
+				E973C9762BE1F37600F96732 /* LocationDataManager.swift */,
 				D08AB7972BDF9F5800E87D9E /* FitMeApp.swift */,
 				D08AB7AD2BDFACD300E87D9E /* WorkoutManager.swift */,
 				D024AAC82BE0BEFC00379654 /* AccelerometerManager.swift */,
@@ -160,7 +161,6 @@
 			);
 			name = "FitMe Watch App";
 			packageProductDependencies = (
-				D024AAD22BE0F8BE00379654 /* Lottie */,
 				E92CACAC2BE0FC850048570C /* SDWebImageLottieCoder */,
 			);
 			productName = "FitMe Watch App";
@@ -195,7 +195,6 @@
 			);
 			mainGroup = D08AB7852BDF9F5700E87D9E;
 			packageReferences = (
-				D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				E92CACAB2BE0FC850048570C /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */,
 			);
 			productRefGroup = D08AB78D2BDF9F5800E87D9E /* Products */;
@@ -237,6 +236,7 @@
 				D08AB79A2BDF9F5800E87D9E /* ContentView.swift in Sources */,
 				D08AB7B22BE0647F00E87D9E /* SpeedometerVelocityView.swift in Sources */,
 				D08AB7982BDF9F5800E87D9E /* FitMeApp.swift in Sources */,
+				E973C9772BE1F37600F96732 /* LocationDataManager.swift in Sources */,
 				D024AAC92BE0BEFC00379654 /* AccelerometerManager.swift in Sources */,
 				D08AB7AE2BDFACD300E87D9E /* WorkoutManager.swift in Sources */,
 				D08AB7B42BE064C500E87D9E /* KilometerProgressView.swift in Sources */,
@@ -379,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitMe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H84M48MBJL;
+				DEVELOPMENT_TEAM = MRV3669B85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
@@ -393,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonard.fitme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -413,7 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitMe Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H84M48MBJL;
+				DEVELOPMENT_TEAM = MRV3669B85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FitMe-Watch-App-Info.plist";
@@ -427,7 +427,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lonard.fitme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -445,7 +445,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H84M48MBJL;
+				DEVELOPMENT_TEAM = MRV3669B85;
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe";
@@ -461,7 +461,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H84M48MBJL;
+				DEVELOPMENT_TEAM = MRV3669B85;
 				INFOPLIST_KEY_CFBundleDisplayName = FitMe;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Agfi-Hermawan.FitMe";
@@ -505,14 +505,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.4.3;
-			};
-		};
 		E92CACAB2BE0FC850048570C /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageLottieCoder";
@@ -524,11 +516,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D024AAD22BE0F8BE00379654 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D024AAD12BE0F8BE00379654 /* XCRemoteSwiftPackageReference "lottie-spm" */;
-			productName = Lottie;
-		};
 		E92CACAC2BE0FC850048570C /* SDWebImageLottieCoder */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E92CACAB2BE0FC850048570C /* XCRemoteSwiftPackageReference "SDWebImageLottieCoder" */;
