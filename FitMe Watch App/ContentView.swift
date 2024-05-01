@@ -13,6 +13,7 @@ import CoreMotion
 struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
     @EnvironmentObject var locationDataManager: LocationDataManager
+    @EnvironmentObject var accelerometerManager: AccelerometerManager
     @State var timer: Timer = Timer()
     
     //    var speed = CLLocationSpeed()
@@ -22,23 +23,30 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("\(speed) kmh")
-            
-            Button(action: {
-                // Get the current location
-                if let currentLocation = self.locationManager.location {
-                    print("Speed")
-                    print("\(currentLocation.speed)")
-                    // Get the speed in meters per second
-                    let speed = currentLocation.speed
-                    // Convert the speed to kilometers per hour
-                    self.speed = speed * 3.6
-                }
-            }) {
-                Text("Get Speed")
-            }
+//            Text("\(accelerometerManager.pace) kmh")
+//            
+//            Button(action: {
+//                // Get the current location
+//                if let currentLocation = self.locationManager.location {
+//                    print("Speed")
+//                    print("\(currentLocation.speed)")
+//                    // Get the speed in meters per second
+//                    let speed = currentLocation.speed
+//                    // Convert the speed to kilometers per hour
+//                    self.speed = speed * 3.6
+//                }
+//            }) {
+//                Text("Get Speed")
+//            }
+//            StartView()
+            StartView()
+//            NavigationLink(destination: {
+//                StartView()
+//            }, label: {
+//                Text("Start View")
+//            })
         }
-        .padding()
+//        .padding()
         .onAppear {
             workoutManager.requestAuthorization()
             locationDataManager.requestAccessPermission()
@@ -50,4 +58,5 @@ struct ContentView: View {
     ContentView()
         .environmentObject(WorkoutManager())
         .environmentObject(LocationDataManager())
+        .environmentObject(AccelerometerManager())
 }
