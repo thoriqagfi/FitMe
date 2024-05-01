@@ -18,7 +18,7 @@ struct SpeedometerVelocityView: View {
                 .opacity(0.7)
             ZStack {
                 Text("\(String(format: "%.0f", accelerometerManager.pace))")
-                        .font(.system(size: 100))
+                        .font(.system(size: 200))
                         .multilineTextAlignment(.center)
                         .fontWeight(.bold)
                         .opacity(0.3)
@@ -37,7 +37,7 @@ struct SpeedometerVelocityView: View {
 struct StyledGauge: View {
     @State var currentSpeed: CGFloat
     @State private var minSpeed = 0.0
-    @State private var maxSpeed = 20.0
+    @State private var maxSpeed = 15.0
     
     let gradient = Gradient(colors: [.green, .yellow, .orange, .red])
 

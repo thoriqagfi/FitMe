@@ -9,20 +9,32 @@ import SwiftUI
 
 struct SessionPagingView: View {
     @State private var selection: Tab = .speedometerVelocity
+    @EnvironmentObject var sessionManager: WorkoutManager
+    @Environment(\.dismiss) var dismiss
     
     enum Tab {
-        case startPage, speedometerVelocity, kilometerProgress, runningVisualization
+        case speedometerVelocity, kilometerProgress, runningVisualization
     }
     
     var body: some View {
         TabView(selection: $selection, content: {
-            ContentView()
-                .tag(Tab.startPage)
             SpeedometerVelocityView().tag(Tab.speedometerVelocity)
             KilometerProgressView().tag(Tab.kilometerProgress)
             RunningVisualizationView().tag(Tab.runningVisualization)
         })
-        .tabViewStyle(.verticalPage)
+        .tabViewStyle(.verticalPage(transitionStyle: .blur))
+        .navigationBarBackButtonHidden()
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    sessionManager.endWorkout()
+                    sessionManager.resetWorkout()
+                    dismiss()
+                }, label: {
+                    Label("Back", systemImage: "chevron.backward.circle.fill")
+                })
+            }
+        }
     }
 }
 
