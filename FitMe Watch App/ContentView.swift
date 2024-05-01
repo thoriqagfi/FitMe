@@ -12,12 +12,14 @@ import CoreMotion
 
 struct ContentView: View {
     @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var locationDataManager: LocationDataManager
     @State var timer: Timer = Timer()
     
     //    var speed = CLLocationSpeed()
     @State private var speed: Double = 0
-    let locationManager = CLLocationManager()
     
+    let locationManager = CLLocationManager()
+
     var body: some View {
         VStack {
             Text("\(speed) kmh")
@@ -26,6 +28,7 @@ struct ContentView: View {
                 // Get the current location
                 if let currentLocation = self.locationManager.location {
                     print("Speed")
+                    print("\(currentLocation.speed)")
                     // Get the speed in meters per second
                     let speed = currentLocation.speed
                     // Convert the speed to kilometers per hour
@@ -38,6 +41,7 @@ struct ContentView: View {
         .padding()
         .onAppear {
             workoutManager.requestAuthorization()
+            locationDataManager.requestAccessPermission()
         }
     }
 }
@@ -45,4 +49,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(WorkoutManager())
+        .environmentObject(LocationDataManager())
 }

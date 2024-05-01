@@ -12,11 +12,13 @@ import CoreMotion
 @main
 struct FitMe_Watch_AppApp: App {
     @StateObject var workoutManager = WorkoutManager()
+    @StateObject var locationDataManager = LocationDataManager()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(workoutManager)
+                .environmentObject(locationDataManager)
         }
     }
 }
