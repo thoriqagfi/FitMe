@@ -14,6 +14,7 @@ struct StartView: View {
     @State var scale: CGFloat = 1.0
     
     @EnvironmentObject var sessionManager: WorkoutManager
+    @EnvironmentObject var accelerometerManager: AccelerometerManager
     
     func onChanged(value: DragGesture.Value) {
         let vector = CGVector(dx: value.location.x, dy: value.location.y)
@@ -65,7 +66,9 @@ struct StartView: View {
 
                     
                     NavigationLink(destination: {
-                        SessionPagingView()
+                        SessionPagingView(kilometerGoals: progress * 20)
+                            .environmentObject(sessionManager)
+                            .environmentObject(accelerometerManager)
                     }, label: {
                         Button(action: {
                             sessionManager.startWorkout(workoutType: .running)
@@ -97,4 +100,6 @@ struct StartView: View {
 
 #Preview {
     StartView()
+        .environmentObject(WorkoutManager())
+        .environmentObject(AccelerometerManager())
 }

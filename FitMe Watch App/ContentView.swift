@@ -40,6 +40,8 @@ struct ContentView: View {
 //            }
 //            StartView()
             StartView()
+                .environmentObject(workoutManager)
+                .environmentObject(accelerometerManager)
 //            NavigationLink(destination: {
 //                StartView()
 //            }, label: {

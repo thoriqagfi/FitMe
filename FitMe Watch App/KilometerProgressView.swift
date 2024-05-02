@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct KilometerProgressView: View {
+    @State var distance: Double
+    @State var kilometerGoals: Double
     
     let background = Color(.white)
     
-    @State private var progressPercent = 75.0
+//    @State private var progressPercent = self.distance / self.kilometerGoals
     @State private var barOffset = Angle(degrees: 0)
     
     var body: some View {
         ZStack {
             background
             // progress bar
-            ProgressBar(offset: Angle(degrees: barOffset.degrees), percent:  progressPercent)
+            ProgressBar(offset: Angle(degrees: barOffset.degrees), percent:  distance/kilometerGoals*100)
                 .fill(Color.orange)
                 .ignoresSafeArea(.all)
             
             // distance label
-            Text("\(Int(progressPercent))%")
+            Text("\(Int(distance/kilometerGoals * 100))%")
                 .font(.system(size: 50))
                 .fontWeight(.bold)
                 .foregroundStyle(.black)
@@ -40,7 +42,7 @@ struct KilometerProgressView: View {
 }
 
 #Preview {
-    KilometerProgressView()
+    KilometerProgressView(distance: 5.0, kilometerGoals: 10.0)
 }
 
 struct ProgressBar: Shape {

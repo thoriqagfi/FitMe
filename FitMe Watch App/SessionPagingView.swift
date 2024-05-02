@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SessionPagingView: View {
+    @State var kilometerGoals: Double
+    
     @State private var selection: Tab = .speedometerVelocity
     @EnvironmentObject var sessionManager: WorkoutManager
     @EnvironmentObject var accelerometerManager: AccelerometerManager
@@ -20,7 +22,7 @@ struct SessionPagingView: View {
     var body: some View {
         TabView(selection: $selection, content: {
             SpeedometerVelocityView().tag(Tab.speedometerVelocity)
-            KilometerProgressView().tag(Tab.kilometerProgress)
+            KilometerProgressView(distance: sessionManager.distance, kilometerGoals: kilometerGoals).tag(Tab.kilometerProgress)
             RunningVisualizationView().tag(Tab.runningVisualization)
         })
         .tabViewStyle(.verticalPage(transitionStyle: .blur))
@@ -40,7 +42,7 @@ struct SessionPagingView: View {
 }
 
 #Preview {
-    SessionPagingView()
+    SessionPagingView(kilometerGoals: 10.0)
         .environmentObject(WorkoutManager())
         .environmentObject(AccelerometerManager())
 }
